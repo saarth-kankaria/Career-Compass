@@ -5,6 +5,8 @@ import os
 app = Flask(__name__)
 
 API_KEY = os.environ.get("OPENROUTER_API_KEY")
+if not API_KEY:
+    raise RuntimeError("OPENROUTER_API_KEY is missing or not set in environment!")
 
 # OpenRouter endpoint and headers
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
