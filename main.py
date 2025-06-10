@@ -1,19 +1,16 @@
 from flask import Flask, render_template, request, jsonify
 import requests
-import os
 
 app = Flask(__name__)
 
-API_KEY = os.environ.get("OPENROUTER_API_KEY")
-if not API_KEY:
-    raise RuntimeError("OPENROUTER_API_KEY is missing or not set in environment!")
+API_KEY = "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"  # ← replace with full key
 
 # OpenRouter endpoint and headers
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
-    "HTTP-Referer": "https://career-compass-tmvx.onrender.com",  # 
     "X-Title": "CareerFinderApp"
+    # Removed HTTP-Referer header to avoid domain mismatch issues
 }
 
 def query_openrouter(prompt):
@@ -69,5 +66,6 @@ def generate():
         return jsonify({"reply": f"Error: {str(e)}"})
 
 if __name__ == "__main__":
+    import os
     port = int(os.environ.get("PORT", 5000))  # Render provides PORT
     app.run(host="0.0.0.0", port=port, debug=True)
