@@ -1,13 +1,16 @@
 from flask import Flask, render_template, request, jsonify
 import requests
+import os
 
 app = Flask(__name__)
+
+API_KEY = os.environ.get("OPENROUTER_API_KEY")
 
 # OpenRouter endpoint and headers
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
 HEADERS = {
-    "Authorization": "Bearer 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",  # Replace this
-    "HTTP-Referer": "http://localhost:5000",  # Optional: your domain
+    "Authorization": f"Bearer {API_KEY}",
+    "HTTP-Referer": "http://localhost:5000",  # Optional
     "X-Title": "CareerFinderApp"
 }
 
@@ -64,4 +67,5 @@ def generate():
         return jsonify({"reply": f"Error: {str(e)}"})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Render provides PORT
+    app.run(host="0.0.0.0", port=port, debug=True)
