@@ -10,7 +10,7 @@ API_KEY = os.environ.get("OPENROUTER_API_KEY")
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
-    "HTTP-Referer": "http://localhost:5000",  # Optional
+    "HTTP-Referer": "https://career-compass-tmvx.onrender.com",  # 
     "X-Title": "CareerFinderApp"
 }
 
