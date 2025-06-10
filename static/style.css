@@ -1,0 +1,116 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #A51C30;
+}
+
+.form-container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #A51C30;
+  margin-bottom: 40px;
+}
+
+.form-step {
+  display: none;
+  flex-direction: column;
+}
+
+.form-step.active {
+  display: flex;
+}
+
+label {
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  margin-bottom: 20px;
+  padding: 10px 14px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #A51C30;
+  box-shadow: 0 0 3px rgba(165, 28, 48, 0.5);
+}
+
+button {
+  padding: 12px 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #A51C30;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8C1627;
+}
+
+.restart {
+  background-color: #555;
+}
+
+.restart:hover {
+  background-color: #333;
+}
+
+#result {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#result h3 {
+  font-family: 'Merriweather', serif;
+  color: #A51C30;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#result pre {
+  background: #f3f3f3;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #A51C30;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
