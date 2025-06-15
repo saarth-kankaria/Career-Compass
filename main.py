@@ -15,16 +15,7 @@ HEADERS = {
 
 def query_openrouter(prompt):
     messages = [
-        {
-            "role": "system",
-            "content": (
-                "You are a helpful and forward-thinking career advisor. "
-                "Based on the user's interests and preferences, suggest exactly 3 career options that are expected "
-                "to be in high demand in the next 10–20 years. Prioritize roles that align with emerging industries, "
-                "technological advancement, environmental sustainability, and long-term job security. "
-                "Use plain, concise language with no formatting—just a clean list of 3 suggestions."
-            )
-        },
+        {"role": "system", "content": "You are a helpful and realistic career advisor. Suggest exactly 3 career options in raw plain text."},
         {"role": "user", "content": prompt}
     ]
 
