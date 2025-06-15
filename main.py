@@ -19,7 +19,7 @@ def query_openrouter(prompt):
     ]
 
     payload = {
-        "model": "openai/o3-pro",
+        "model": "mistralai/mistral-7b-instruct",
         "messages": messages,
         "temperature": 0.7,
         "max_tokens": 1000
