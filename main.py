@@ -3,14 +3,13 @@ import requests
 
 app = Flask(__name__)
 
-API_KEY = "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"  # ← replace with full key
+API_KEY = "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"
 
 # OpenRouter endpoint and headers
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
     "X-Title": "CareerFinderApp"
-    # Removed HTTP-Referer header to avoid domain mismatch issues
 }
 
 def query_openrouter(prompt):
@@ -20,7 +19,7 @@ def query_openrouter(prompt):
     ]
 
     payload = {
-        "model": "mistralai/mistral-7b-instruct",
+        "model": "openai/o3-pro",,
         "messages": messages,
         "temperature": 0.7,
         "max_tokens": 1000
