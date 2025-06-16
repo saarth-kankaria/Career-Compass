@@ -1,6 +1,6 @@
 # Career Compass
 
-#### Video Demo: 
+#### Video Demo: [https://youtu.be/JcJ2H30gzNg](https://youtu.be/JcJ2H30gzNg)
 
 #### Description:
 Rapid advancements in technology have led to an evolving job market making it difficult for people to plan their futures, and figure out what career suits them best. 
